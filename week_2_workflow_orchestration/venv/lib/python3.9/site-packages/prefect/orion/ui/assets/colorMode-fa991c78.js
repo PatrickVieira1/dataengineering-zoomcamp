@@ -1,0 +1,1 @@
+import{K as a,c,L as t,M as l}from"./index-7b2fa3e3-fc9295f6.js";const s="orion-color-mode",e=localStorage.getItem(s),n=l(e)?e:null,{value:r,set:d}=a(s,n),i=c({get(){return r.value},set(o){d(o),t(o)}});function M(){t(i.value)}export{i as a,M as i};
