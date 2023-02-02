@@ -7,3 +7,4 @@ data
 output.csv
 output.csv.gz
 terraform-provider-google_v4.50
+venv
