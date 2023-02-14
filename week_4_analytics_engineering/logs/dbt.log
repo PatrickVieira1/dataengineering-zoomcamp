@@ -1,0 +1,51 @@
+
+
+============================== 2023-02-14 01:09:40.598965 | cdb29565-3c1f-4357-bc0f-2f390545c96b ==============================
+[0m01:09:40.598977 [info ] [MainThread]: Running with dbt=1.3.0
+[0m01:09:40.599230 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/tick/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:09:40.599325 [debug] [MainThread]: Tracking: tracking
+[0m01:09:40.601528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28d6cdfa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28d6cdf9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28d6cdf970>]}
+[0m01:09:51.755598 [debug] [MainThread]: Starter project path: /home/tick/.local/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:10:11.260745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28d6d37220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28d6d37100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f28d6d37460>]}
+[0m01:10:11.260978 [debug] [MainThread]: Flushing usage events
+[0m01:10:11.936175 [error] [MainThread]: Encountered an error:
+cannot import name 'gcloud' from 'dbt.clients' (/home/tick/.local/lib/python3.9/site-packages/dbt/clients/__init__.py)
+[0m01:10:11.939267 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/main.py", line 135, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/main.py", line 198, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/main.py", line 245, in run_from_args
+    results = task.run()
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/task/init.py", line 332, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/task/init.py", line 200, in create_profile_from_target
+    load_plugin(adapter)
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/adapters/factory.py", line 201, in load_plugin
+    return FACTORY.load_plugin(name)
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/adapters/factory.py", line 56, in load_plugin
+    mod: Any = import_module("." + name, "dbt.adapters")
+  File "/usr/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/adapters/bigquery/__init__.py", line 1, in <module>
+    from dbt.adapters.bigquery.connections import BigQueryConnectionManager  # noqa
+  File "/home/tick/.local/lib/python3.9/site-packages/dbt/adapters/bigquery/connections.py", line 22, in <module>
+    from dbt.clients import agate_helper, gcloud
+ImportError: cannot import name 'gcloud' from 'dbt.clients' (/home/tick/.local/lib/python3.9/site-packages/dbt/clients/__init__.py)
+
+
+
+============================== 2023-02-14 01:24:15.996910 | c8261aa2-dfb7-4580-bb8a-63e8d7b43db4 ==============================
+[0m01:24:15.996921 [info ] [MainThread]: Running with dbt=1.3.0
+[0m01:24:15.997178 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/tick/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:24:15.997283 [debug] [MainThread]: Tracking: tracking
+[0m01:24:16.000147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe473dfaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe473dfa30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe473df9d0>]}
+[0m01:24:20.163493 [info ] [MainThread]: A project called de_zoomcamp already exists here.
+[0m01:24:20.164001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe473df640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe473df670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efe473df730>]}
+[0m01:24:20.164318 [debug] [MainThread]: Flushing usage events
