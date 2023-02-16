@@ -8,3 +8,8 @@ output.csv
 output.csv.gz
 terraform-provider-google_v4.50
 venv
+# Default .gitignore content added by dbt Cloud
+target/
+dbt_packages/
+logs/
+# end dbt Cloud content
