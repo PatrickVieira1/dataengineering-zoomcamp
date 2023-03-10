@@ -10,6 +10,7 @@ terraform-provider-google_v4.50
 venv
 *.csv
 *.gz
+*.parquet
 fhvhv/
 fhvhv_hw/
 # Default .gitignore content added by dbt Cloud
