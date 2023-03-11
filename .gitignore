@@ -13,6 +13,7 @@ venv
 *.parquet
 fhvhv/
 fhvhv_hw/
+getting_started.ini
 # Default .gitignore content added by dbt Cloud
 target/
 dbt_packages/
