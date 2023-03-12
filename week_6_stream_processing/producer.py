@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+#first program following Confluent Cloud tutorial to create a basic producer and consumer in Apache Kafka
 import sys
 from random import choice
 from argparse import ArgumentParser, FileType
