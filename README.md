@@ -9,5 +9,5 @@ We had the following program:
 * [Week 3: Data Warehouse](/week_3_data_warehouse)
 * [Week 4: Analytics Engineering](/week_4_analytics_engineering)
 * [Week 5: Batch processing](/week_5_batch_processing)
-* [Week 6: Streaming]
+* [Week 6: Streaming](/week_6_stream_processing)
 * [Week 7, 8 & 9: Project]
