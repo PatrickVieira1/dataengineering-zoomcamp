@@ -21,26 +21,6 @@ def download_from_url(url: str, years: list):
 @task(retries=3)
 def clean_dfs():
     
-    columns_to_rename = {
-       'Regiao - Sigla': 'regiao_sigla', 
-       'Estado - Sigla': 'estado_sigla', 
-       'Municipio': 'municipio', 
-       'Revenda': 'revenda',
-       'CNPJ da Revenda': 'cnpj_revenda',
-       'Nome da Rua': 'endereço', 
-       'Numero Rua': 'numero_rua', 
-       'Complemento': 'complemento', 
-       'Bairro': 'bairro',
-       'Cep': 'cep', 
-       'Produto': 'produto',
-       'Data da Coleta': 'data_da_coleta',
-       'Valor de Venda': 'valor_venda',
-       'Valor de Compra': 'valor_compra',
-       'Unidade de Medida': 'unidade_medida',
-       'Bandeira': 'bandeira'
-    }
-    
-    
     for file in os.listdir():
         if file[0:2] == 'ca':
             
@@ -59,6 +39,25 @@ def clean_dfs():
                  encoding='latin-1',
                  quotechar='"'
                  )
+            
+            columns_to_rename = {
+            df.columns[0]: 'regiao_sigla', 
+            df.columns[1]: 'estado_sigla', 
+            df.columns[2]: 'municipio', 
+            df.columns[3]: 'revenda',
+            df.columns[4]: 'cnpj_revenda',
+            df.columns[5]: 'endereço', 
+            df.columns[6]: 'numero_rua', 
+            df.columns[7]: 'complemento', 
+            df.columns[8]: 'bairro',
+            df.columns[9]: 'cep', 
+            df.columns[10]: 'produto',
+            df.columns[11]: 'data_da_coleta',
+            df.columns[12]: 'valor_venda',
+            df.columns[13]: 'valor_compra',
+            df.columns[14]: 'unidade_medida',
+            df.columns[15]: 'bandeira'
+            }
             
             df.rename(columns=columns_to_rename)
             
@@ -92,7 +91,7 @@ def elt_web_to_gcs() -> None:
     url = 'https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/'
     years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
     
-    download_from_url(url, years)    
+    #download_from_url(url, years)    
     clean_dfs()
     local_to_gcs()
         
