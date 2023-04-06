@@ -4,17 +4,17 @@
 
 ### Problem Description
 
-    - I chose a dataset that represents my country and makes sense to me, while having a good size to do some analysis.
-    - So the main goal was to build a data pipeline that make the batch data goes from a public source to a dashboard.
-    - But using the most modern tools to have scalability, reproducibility and availability. The data stack chosen is shown below:
+- I chose a dataset that represents my country and makes sense to me, while having a good size to do some analysis.
+- So the main goal was to build a data pipeline that make the batch data goes from a public source to a dashboard.
+- But using the most modern tools to have scalability, reproducibility and availability. The data stack chosen is shown below:
 
-    * Data Lake: Google Cloud Storage
-    * Pipeline Orchestration: Prefect
-    * Data Warehouse: Snowflake
-    * Data Transformation: dbt
-    * BI tool: Looker Studio
+  - Data Lake: Google Cloud Storage
+  - Pipeline Orchestration: Prefect
+  - Data Warehouse: Snowflake
+  - Data Transformation: dbt
+  - BI tool: Looker Studio
 
-    - The main difference from what we learnt on the course, was that I chose Snowflake instead of Bigquery, just to have experience using Snowflake, but they both serve the same purpose.
+- The main difference from what we learnt on the course, was that I chose Snowflake instead of Bigquery, just to have experience using Snowflake, but they both serve the same purpose.
 
 ## Instructions
 
