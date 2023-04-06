@@ -1,0 +1,23 @@
+
+version: 2
+
+sources:
+  - name: staging
+    database: GAS_PRICES_BRAZIL
+    schema: public
+
+    tables:
+      - name: "gas_prices_brazil"
+        quoting:
+          identifier: true        
+
+models:
+    - name: final_zoomcamp_project
+      description: "Model for the final project in the Data Engineering Zoomcamp"
+      columns:
+          - name: data_da_coleta
+            description: "Date for when the data as collected"
+            tests:
+                - not_null:
+                    severity: warn
+
