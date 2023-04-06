@@ -9,8 +9,7 @@ sources:
     tables:
       - name: "gas_prices_brazil"
         quoting:
-          identifier: true
-        
+          identifier: true        
 
 models:
     - name: final_zoomcamp_project
