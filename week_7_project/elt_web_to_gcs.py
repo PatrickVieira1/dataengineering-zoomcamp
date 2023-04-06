@@ -59,7 +59,7 @@ def clean_dfs():
             df.columns[15]: 'bandeira'
             }
             
-            df.rename(columns=columns_to_rename)
+            df = df.rename(columns=columns_to_rename)
             
             df.to_parquet(f'data/{file[:-4]}.parquet')
             
@@ -91,7 +91,7 @@ def elt_web_to_gcs() -> None:
     url = 'https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/'
     years = [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
     
-    #download_from_url(url, years)    
+    download_from_url(url, years)    
     clean_dfs()
     local_to_gcs()
         
